@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Crypto Mobile Template</title>
+
+    <!-- Google font file. If you want you can change. -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900" rel="stylesheet">
+
+    <!-- Fontawesome font file css -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+    <!-- Animate css file for css3 animations. for more : https://daneden.github.io/animate.css -->
+    <!-- Only use animate action. If you dont use animation, you don't have to add.-->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/cryptocoins.css">
+    <link rel="stylesheet" type="text/css" href="plugins/c3-chart/c3.css">
+
+    <!-- Template global css file. Requared all pages -->
+    <link rel="stylesheet" type="text/css" href="css/global.style.css">
+
+    <!-- Swiper slider css file -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!--turbo slider plugin css file -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/turbo-slider/turbo.css">
+
+
+
+    <!--         추가한 CSS           -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        #top {
+            margin-top: 20px;
+        }
+
+        .btn-container {
+            background: #fff;
+            border-radius: 5px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .imgupload {
+            color: #1E2832;
+            padding-top: 40px;
+            font-size: 7em;
+        }
+
+        #namefile {
+            color: black;
+        }
+
+        h4>strong {
+            color: #ff3f3f
+        }
+
+        .btn-primary {
+            border-color: #ff3f3f !important;
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #ff3f3f !important;
+            border-color: #ff3f3f !important;
+        }
+
+        /*these two are set to not display at start*/
+        .imgupload.ok {
+            display: none;
+            color: green;
+        }
+
+        .imgupload.stop {
+            display: none;
+            color: red;
+        }
+
+
+        /*this sets the actual file input to overlay our button*/
+        #fileup {
+            opacity: 0;
+            -moz-opacity: 0;
+            filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+            width: 200px;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
+            height: 50px;
+        }
+
+        /*switch between input and not active input*/
+        #submitbtn {
+            padding: 5px 50px;
+            display: none;
+            align-items: center;
+        }
+
+        #fakebtn {
+            padding: 5px 40px;
+        }
+
+
+        /*www.emilianocostanzo.com*/
+        #sign {
+            color: #1E2832;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            text-shadow: 0px 0px 0px #1E2832;
+            transition: all.3s;
+        }
+
+        #sign:hover {
+            color: #1E2832;
+            text-shadow: 0px 0px 5px #1E2832;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="wrapper ">
+        <div class="nav-menu">
+            <nav class="menu">
+
+                <!-- Menu navigation start -->
+                <div class="nav-container">
+                    <ul class="main-menu">
+                        <li class="active">
+                            <a href="index.html"><img src="img/content/icons/1.png" alt=""><strong
+                                    class="special">Dashboard</strong> </a>
+                        </li>
+                        <li class="">
+                            <a href="wallet.html"><img src="img/content/icons/2.png" alt=""><strong class="special">My
+                                    Walet</strong> </a>
+                        </li>
+                        <li class="">
+                            <a href="trading.html"><img src="img/content/icons/3.png" alt=""><strong
+                                    class="special">Crypto Trade</strong> </a>
+                        </li>
+                        <li class="">
+                            <a href="buy-sell.html"><img src="img/content/icons/6.png" alt=""><strong
+                                    class="special">Buy & sell</strong> </a>
+                        </li>
+                        <li class="">
+                            <a href="profile.html"><img src="img/content/icons/5.png" alt=""><strong
+                                    class="special">Trader Profile</strong> </a>
+                        </li>
+                        <li class="">
+                            <a href="affiliate.html"><img src="img/content/icons/4.png" alt=""><strong
+                                    class="special">Affiliate System</strong> </a>
+                        </li>
+                        <li class="">
+                            <a href="setting.html"><img src="img/content/icons/11.png" alt=""><strong
+                                    class="special">Settings</strong> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><img src="img/content/icons/9.png" alt=""><strong
+                                    class="special">Login/Register</strong> <span class="fa fa-angle-down"></span></a>
+                            <ul>
+                                <li><a href="login.html" data-loader="show">Login</a></li>
+                                <li><a href="signup.html" data-loader="show">Register</a></li>
+                                <li><a href="forgot-password.html" data-loader="show">Forgot Password</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);"><img src="img/content/icons/8.png" alt=""> <strong
+                                    class="special">Wizards</strong> <span class="fa fa-angle-down"></span></a>
+                            <ul>
+                                <li><a href="wizard-default.html" data-loader="show">Wizard Default</a></li>
+                                <li><a href="wizard-fullscreen.html" data-loader="show">Wizard Fullscreen</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="charts.html"><img src="img/content/icons/14.png" alt=""><strong
+                                    class="special">Charts</strong> </a>
+                        </li>
+                        <li>
+                            <a href="forms.html" data-loader="show"><img src="img/content/icons/7.png" alt=""><strong
+                                    class="special">Form Elements</strong></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/content/icons/10.png" alt=""><strong class="special">
+                                    Components</strong> <span class="fa fa-angle-down"></span></a>
+                            <ul>
+                                <li><a href="tab-bottom.html" data-loader="show">Tab (Bottom)</a></li>
+                                <li><a href="tab-top.html" data-loader="show">Tab (Top)</a></li>
+                                <li><a href="accordion.html" data-loader="show">Accordion</a></li>
+                                <li><a href="popup.html" data-loader="show">Popup Modal</a></li>
+                                <li><a href="checkbox-list.html" data-loader="show">Check List</a></li>
+                                <li><a href="link-list.html" data-loader="show">Link List</a></li>
+                                <li><a href="link-list-two-column.html" data-loader="show">Two Column Links</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#"><img src="img/content/icons/15.png" alt=""><strong class="special">
+                                    Pages</strong> <span class="fa fa-angle-down"></span></a>
+                            <ul>
+                                <li class=""><a href="profile.html" data-loader="show">User Profile</a></li>
+                                <li><a href="search-result.html" data-loader="show">Search Results</a></li>
+                                <li><a href="contact.html" data-loader="show">Contact</a></li>
+                                <li><a href="blank.html" data-loader="show">Blank Page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menu navigation end -->
+            </nav>
+        </div>
+        <div class="wrapper-inline">
+            <!-- Header area start -->
+            <header class="no-background">
+                <!-- extra class no-background -->
+
+                <div class="search-button" data-search="open">
+                    <img src="img/content/notification1.png" class="not-icon1" alt="">
+                    <img src="img/content/notification2.png" class="not-icon2" alt="">
+                </div>
+
+                <h1 class="page-title">업로드하기</h1>
+                <div class="navi-menu-button">
+                    <em></em>
+                    <em></em>
+                    <em></em>
+                </div>
+
+            </header>
+            <!-- Header area end -->
+
+            <!--NOTIFICATION BOX CONTENT START-->
+            <div class="search-form">
+                <span class="close-search-form" data-search="close"><i class="fa fa-times"></i> </span>
+                <form>
+                    <div class="search-input">
+                        <input type="text" name="q" class="form-element" placeholder="Search...">
+                        <button type="submit" class="search-input-btn"><i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </form>
+                <ul class="notification-list list-unstyled">
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <h5 class="coin-name">You have 3 notifications</h5>
+                                </div>
+                            </div>
+                            <div>
+                                <a href=""><small class="text-muted d-block">mark all as read</small></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="notice-icon available">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="ml-10">
+                                    <h4 class="coin-name">Successful transaction 0.01 BTC</h4>
+                                    <small class="text-muted">15 min ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="notice-icon away">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <div class="ml-10">
+                                    <h4 class="coin-name">4 of Pending Transactions!</h4>
+                                    <small class="text-muted"> 12 hours ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="notice-icon busy">
+                                    <i class="fa fa-times"></i>
+                                </div>
+                                <div class="ml-10">
+                                    <h4 class="coin-name">Cancelled Order of 200 ICO</h4>
+                                    <small class="text-muted">15 Feb - 08:34</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="notice-icon available">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div class="ml-10">
+                                    <h4 class="coin-name">Great Speed Notify of 1.34 LTC</h4>
+                                    <small class="text-muted">24 jan - 20:43</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <a href="" class="text-muted">Read all notifications</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!--NOTIFICATION BOX CONTENT END-->
+
+            <!-- Page content start -->
+            <main class="margin mt-0">
+
+                <div class="dash-balance">
+                    <div class="dash-content relative">
+                        <h3 class="w-text" id="myPoint"></h3>
+                        <!--<div class="notification">
+                     <a href=""><i class="fa fa-plus"></i></a>
+                  </div>-->
+                    </div>
+                </div>
+
+                <!-- 여기부터 -->
+
+
+                <!--action="http://localhost:3000/finished"-->
+                <form id="formFile" enctype="multipart/form-data" accept-charset="utf-8">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 center">
+                            <div class="btn-container">
+                                <!--the three icons: default, ok file (img), error file (not an img)-->
+                                <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
+                                <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
+                                <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
+                                <!--this field changes dinamically displaying the filename we are trying to upload-->
+                                <p id="namefile">리뷰 작성</p>
+                                <!--our custom btn which which stays under the actual one-->
+                                <button type="button" id="btnup" class="btn btn-primary btn-lg">Upload</button>
+                                <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
+                                <input type="file" value="" name="fileup" id="fileup">
+                            </div>
+                        </div>
+                    </div>
+                    <!--additional fields-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--the defauld disabled btn and the actual one shown only if the three fields are valid-->
+                            <input type="button" value="Submit" class="btn btn-primary" id="submitbtn" style="position: relative; left: 50%; transform: translateX(-50%);">
+                            <button type="button" class="btn btn-default" disabled="disabled" id="fakebtn" style="position: relative; left: 50%; transform: translateX(-50%);">Submit
+                                
+                        </div>
+                    </div>
+                </form>
+        </div>
+
+        <!-- 여기까지 -->
+
+
+        <!--
+            <div class="filebox">
+            <input class="upload-name" value="파일선택" disabled="disabled">
+            <label for="ex_filename" class="button circle block orange">업로드</label>
+            <form enctype="multipart/form-data">
+                <input type="file" id="ex_filename" class="upload-hidden">
+            </form>
+        </div>
+
+        -->
+
+
+        <footer>
+            <div class="container">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <p>Copyright © All Right Reserved</p>
+            </div>
+        </footer>
+        </main>
+        <!-- Page content end -->
+    </div>
+    </div>
+
+    <!--Page loader DOM Elements. Requared all pages-->
+    <div class="sweet-loader">
+        <div class="box">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+        </div>
+    </div>
+
+    <!-- JQuery library file. requared all pages -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+
+    <!-- Flot Charts -->
+    <script src="plugins/c3-chart/c3.min.js"></script>
+    <script src="plugins/c3-chart/d3.min.js"></script>
+    <script src="plugins/c3-chart/c3.custom.js"></script>
+    <!-- Flot Charts -->
+    <script src="plugins/flot/jquery.flot.min.js"></script>
+    <script src="plugins/flot/jquery.flot.time.min.js"></script>
+    <script src="plugins/flot/jquery.flot.pie.min.js"></script>
+    <script src="plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="plugins/flot/jquery.flot.resize.min.js"></script>
+    <!-- Sparkline-->
+    <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Template global script file. requared all pages -->
+    <script src="js/app-charts.js"></script>
+    <script src="js/global.script.js"></script>
+
+</body>
+
+
+<!--    이미지 업로드 기능 script        -->
+<script>
+
+    $('#fileup').change(function () {
+        //here we take the file extension and set an array of valid extensions
+        var res = $('#fileup').val();
+        var arr = res.split("\\");
+        var filename = arr.slice(-1)[0];
+        filextension = filename.split(".");
+        filext = "." + filextension.slice(-1)[0];
+        valid = [".jpg", ".png", ".jpeg", ".bmp"];
+        //if file is not valid we show the error icon, the red alert, and hide the submit button
+        if (valid.indexOf(filext.toLowerCase()) == -1) {
+            $(".imgupload").hide("slow");
+            $(".imgupload.ok").hide("slow");
+            $(".imgupload.stop").show("slow");
+
+            $('#namefile').css({ "color": "red", "font-weight": 700 });
+            $('#namefile').html("File " + filename + " is not  pic!");
+
+            $("#submitbtn").hide();
+            $("#fakebtn").show();
+        } else {
+            //if file is valid we show the green alert and show the valid submit
+            $(".imgupload").hide("slow");
+            $(".imgupload.stop").hide("slow");
+            $(".imgupload.ok").show("slow");
+
+            $('#namefile').css({ "color": "green", "font-weight": 700 });
+            $('#namefile').html(filename);
+
+            $("#submitbtn").show();
+            $("#fakebtn").hide();
+        }
+    });
+
+</script>
+
+<!--    이미지를 DB로 script    -->
+
+<script>
+$( document ).ready(function() {
+
+    var jwtToken = sessionStorage.getItem('jwtToken')
+    $("#submitbtn").click(function () {
+        uploadFile();
+        alert("사진이 업로드 되었습니다.")
+        window.location.href="http://localhost:3000/main";
+    });
+    
+    function uploadFile() {
+            var formData = new FormData();
+            var data = $("input[name=fileup]")[0].files[0]
+            formData.append("img", data);
+            console.log(data);
+            //formData.append("fileObj2", $("#FILE_TAG2")[0].files[0]);
+            $.ajax({
+                url: 'http://localhost:3000/finished/upload',
+                processData: false,
+                contentType: false,
+                data: formData,
+                type: 'POST',
+                success: function (result) {
+                    console.log(result);
+                    console.log(result.path);
+
+                    alert("업로드 성공!!");
+                    $.ajax({
+                        url: "http://localhost:3000/finished/insertData",
+                        type: "POST",
+                        headers: {
+                            'x-access-token': jwtToken
+                        },
+                        data: {
+                            path : result.path
+                        },
+                        success: function (data) {
+                            console.log(data);
+                        }
+                    })
+                },
+                error: function (request, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+    })
+</script>
+
+</html>

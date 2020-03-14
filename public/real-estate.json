@@ -1,0 +1,93 @@
+[
+  {
+    "id": 0,
+    "type": "아파트",
+    "picture": "images/apartment.jpg",
+    "area": "85A/59",
+    "price": 1.23,
+    "number": "000-0000-0000",
+    "address" : " 경기도 안산시 한양대학로 55번길 0"
+   
+  },
+  {
+    "id": 1,
+    "type": "연립주택",
+    "picture": "images/townhouse.jpg",
+    "area": "115/76",
+    "price": 1.56,
+    "number": "111-1111-1111",
+    "address" : "경기도 안산시 한양대학로 55번길 1"
+  },
+  {
+    "id": 2,
+    "type": "하우스",
+    "picture": "images/house.jpg",
+    "area": "204/72",
+    "price": 2.74,
+    "number": "222-2222-2222",
+    "address" : "경기도 안산시 한양대학로 55번길 2"
+  },
+  {
+    "id": 3,
+    "type": "하우스",
+    "picture": "images/house.jpg",
+    "area": "693/82",
+    "price": 1.87,
+    "number": "333-3333-3333",
+    "address" : "경기도 안산시 한양대학로 55번길 3"
+  },
+  {
+    "id": 4,
+    "type": "연립주택",
+    "picture": "images/townhouse.jpg",
+    "area": "46/45",
+    "price": 1.97,
+    "number": "444-4444-4444",
+    "address" : "경기도 안산시 한양대학로 55번길 4"
+  },
+  {
+    "id": 5,
+    "type": "아파트",
+    "picture": "images/apartment.jpg",
+    "area": "113A/84",
+    "price": 1.77,
+    "number": "555-5555-5555",
+    "address" : "경기도 안산시 한양대학로 55번길 5"
+  },
+  {
+    "id": 6,
+    "type": "아파트",
+    "picture": "images/apartment.jpg",
+    "area": "145/114",
+    "price": 2.12,
+    "number":"666-6666-6666",
+    "address" : "경기도 안산시 한양대학로 55번길 6"
+  },
+  {
+    "id": 7,
+    "type": "하우스",
+    "picture": "images/house.jpg",
+    "area": "430/92",
+    "price": 2.57,
+    "number": "777-7777-7777",
+    "address" : "경기도 안산시 한양대학로 55번길 7"
+  },
+  {
+    "id": 8,
+    "type": "아파트",
+    "picture": "images/apartment.jpg",
+    "area": "111B/84",
+    "price": 1.32,
+    "number": "888-8888-8888",
+    "address" : "경기도 안산시 한양대학로 55번길 8"
+  },
+  {
+    "id": 9,
+    "type": "연립주택",
+    "picture": "images/townhouse.jpg",
+    "area": "75/61",
+    "price": 1.11,
+    "number": "999-9999-9999",
+    "address" : "경기도 안산시 한양대학로 55번길 9"
+  }
+]
