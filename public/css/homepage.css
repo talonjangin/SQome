@@ -1,0 +1,25 @@
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.panel-heading{
+    background-color: #52609c !important;
+}
+
+
+.panel-title{
+    color : white;
+    text-align: center;
+}
+
+body{
+    background-color : #dbece3 !important;
+    font-family : 'Nanum Gothic', serif;
+}
+
+button{
+    align-items: center;
+    left : 40%;
+    margin-left:35%;
+    background-color: #ebc5ff;
+}
+

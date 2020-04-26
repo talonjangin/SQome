@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>테스트</title>
+    <title>메인페이지</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-      
+    <link rel="stylesheet" href="css/homepage.css"/>
+    <link rel="stylesheet" href="css/jisung.css"/>
     
     <script language="javascript">
  
@@ -34,8 +35,6 @@
       }
   </script>
   
-  
-
 
 
 
@@ -45,18 +44,19 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1 class="text-center">테스트</h1>
+          <h1 class="text-center">SQome</h1>
           <hr/>
           <br/>
         </div>
       </div>
       
       <span style ="float : right; font-size : 25px">
+        
         <div >   <a href="myPage"><img src="img/content/icons/1.png" alt=""><strong class="special">메뉴</strong> </a></br></div>
        </span>
-    
+     
       <!-- <div id="events"></div> -->
-      <a href="new">새로 쓰기    </br></a>
+    
       <div class="row" id="list">
         <!-- 매물 리스트 -->
         <h1 class="text-center">    </br>                   </h1>
@@ -73,22 +73,24 @@
         
           <div class="panel-heading">
           
-            <h3 class="panel-title">매물</h3>
+            <h3 class="panel-title">거래 물품</h3>
           </div>
           <div class="panel-body">
             <img style="width: 100%;" src="" >
             <br/><br/>
-            <strong>아이디</strong>: <span class="id"></span><br/>
-            <strong>종류</strong>: <span class="type"></span><br/>
-            <strong>면적(m²)</strong>: <span class="area"></span><br/>
-            <strong>가격(ETH)</strong>: <span class="price"></span><br/><br/>
-
+           
+    
+            <strong>가격</strong>: <span class="price"></span> (ETH)<br/>
+            <strong>작성자(호스트)</strong>: <span class="hostID"></span><br/>
+            <strong>작성 일자</strong>: <span class="date"></span><br/>
             <button class="btn btn-info btn-buy" 
                     type="button" 
                     data-toggle="modal" 
                     data-target="#buyModal">
                     예약하기
             </button>
+
+          
             <button class="btn btn-info btn-buyerInfo" 
                     type="button" 
                     data-toggle="modal" 

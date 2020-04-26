@@ -1,4 +1,6 @@
+
 App = {
+
   web3Provider: null,
   contracts: {},
 	
@@ -13,7 +15,8 @@ App = {
         template.find('.type').text(data[i].type);
         template.find('.area').text(data[i].area);
         template.find('.price').text(data[i].price);
-
+        template.find('.hostID').text(data[i].hostID);
+        template.find('.date').text(data[i].date);
         list.append(template.html());
       }
     })
@@ -46,6 +49,7 @@ App = {
     var name = $('#name').val();
     var price = $('#price').val();
     var age = $('#age').val();
+    var hostID = $('#hostID').val();
 
     web3.eth.getAccounts(function(error, accounts) {
       if (error) {
@@ -86,7 +90,7 @@ App = {
               break;
           }
 
-          $('.panel-realEstate').eq(i).find('.btn-buy').text('매각').attr('disabled', true);
+          $('.panel-realEstate').eq(i).find('.btn-buy').text('예약완료').attr('disabled', true);
           $('.panel-realEstate').eq(i).find('.btn-buyerInfo').removeAttr('style');
         }
       }
